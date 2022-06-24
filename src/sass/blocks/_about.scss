@@ -1,0 +1,65 @@
+.about {
+    padding-top: 80px;
+    background: url('../img/about-bg.png') $bg-color no-repeat center/cover;
+    @media (max-width: 992px) {
+        background: url('../img/about-bg.png') #f4f9fc no-repeat -237px -93px;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        @media(max-width: 1300px) {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1.5fr;
+        }
+    }
+    &__text {
+        max-width: 333px;
+    }
+    &__title {
+        line-height: 80px;
+    }
+    &__subtitle {
+        width: 318px;
+        font-size: 18px;
+        margin-top: 24px;
+        line-height: 30px;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        margin-top: 64px;
+        &::after {
+            content: '';
+            margin-left: 16px;
+            display: block;
+            background: url('../icons/play.svg') center center/cover;
+            width: 14px;
+            height: 18px;
+        }
+    }
+    &__features {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 364px);
+        column-gap: 80px;
+        row-gap: 40px;
+        @media(max-width: 1300px) {
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 0;
+        }
+        &-item {
+            &-img {
+                width: 80px;
+            }
+            &-title {
+                margin-top: 25px;
+            }
+            &-descr {
+                margin-top: 15px;
+            }
+        }
+    }
+}

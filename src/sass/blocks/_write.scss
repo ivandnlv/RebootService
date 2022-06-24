@@ -1,0 +1,167 @@
+.write {
+    padding-top: 85px;
+    position: relative;
+    background: #F4F9FC;
+    &__promo {
+        position: absolute;
+        font-size: 113.007px;
+        left: 405px;
+        top: 30px;
+        color: #FF6B00;
+        text-shadow: 1px 20px 30px rgba(255,107,0, .3);
+        line-height: 113px;
+        background: #F4F9FC;
+        padding: 0 11px;
+        @media(max-width: 1300px) {
+            top: 30px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 165px;
+            top: -15px;
+            background: url('../icons/fire.svg') center center/cover no-repeat;
+            width: 24px;
+            height: 32px;
+        }
+    }
+    &__wrapper {
+        padding: 48px 111px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 177px;
+        border: 1px solid #C7D1D7;
+        border-radius: 30px;
+        @media(max-width: 1300px) {
+            padding: 62px 50px;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 20px;
+        }
+    }
+    &__text {
+        margin-top: 25px;
+        line-height: 48px;
+        span {
+            font-family: "Bebas Neue";
+            color: $main-color;
+        }
+    }
+    &__form {
+        align-items: center;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 240px);
+        column-gap: 24px;
+        row-gap: 20px;
+        &-complete {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(244,249,252,1);
+            text-align: center;
+            z-index: 1100;
+            top: 0;
+            left: 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 15px;
+            height: 100%;
+            background: rgba(244,249,252,0.8) url("../icons/loading.gif") center / 50px no-repeat;
+            transition: 0.2s all;
+            visibility: hidden;
+            opacity: 0;
+        }
+        &._sending::after {
+            opacity: 1;
+            visibility: visible;
+        }
+        .error__text {
+            color: $main-color;
+            text-align: start;
+            font-size: 14px;
+            line-height: 26px;
+            &:first-of-type {
+                grid-row: 2;
+            }
+            &:nth-of-type(2) {
+                grid-row: 2;
+                @media(max-width: 572px) {
+                    grid-row: 4;
+                }
+            }
+            &:nth-of-type(3) {
+                grid-row: 4;
+                @media(max-width: 572px) {
+                    grid-row: 6;
+                }
+            }
+        }
+        
+        input {
+            position: relative;
+            background: #F4F9FC;
+            font-family: "Montserrat";
+            font-size: 14px;
+            line-height: 26px;
+            padding: 19px 24px;
+            border-radius: 15px;
+            border: 1px solid #DADADA;
+            &._error {
+                border: 1px solid $main-color;
+            }
+            &:active {
+                color: #13171D;
+                border: 1px solid #867E7E;
+                border-radius: 15px;
+            }
+            &:focus {
+                color: #13171D;
+                border: 1px solid #867E7E;
+                border-radius: 15px;
+            }
+            &[type="checkbox"] {
+                position: relative;
+                &::before {
+                    content: '';
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    top:0;
+                    right: 0;
+                    box-shadow: 1px 1px 5px $main-color;
+                    @media(max-width: 572px) {
+                        width: 10px;
+                        height: 12px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                &._error::before {
+                    display: block;
+                }
+            }
+            @media(max-width: 572px) {
+                width: 100%;
+            }
+        }
+        input:last-of-type {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &-btn {
+            font-size: 16px;
+            line-height: 28px;  
+        }
+    }
+}

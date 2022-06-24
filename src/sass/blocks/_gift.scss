@@ -1,0 +1,74 @@
+.gift {
+    padding-top: 130px;
+    background:#F4F9FC;
+    &__title {
+        max-width: 966px;
+        line-height: 84px;
+    }
+    &__btns {
+        width: 112px;
+        margin-top: 60px;
+        margin-left: auto;
+    }
+    &__slide {
+        margin-top: 45px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        &-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            background: url('../icons/work__item-bg.svg') 0px 14px no-repeat;
+            width: 312px;
+            height: 326px;
+            
+            &-title {
+                position: absolute;
+                top: 250px;
+                left: 40px;
+            }
+            &-img {
+                margin-bottom: 70px;
+            }
+        }
+        @media(max-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(2, 305px);
+            grid-template-rows: repeat(4, 338px);
+            row-gap: 90px;
+            column-gap: 40px;
+            width: 100%;
+            justify-content: center;
+        }
+        @media(max-width: 650px) {
+            grid-template-columns: repeat(2, 270px);
+            justify-content: center;
+        }
+    }
+    &__circles {
+        margin: 35px auto 0 auto;
+        display: flex;
+        align-items: center;
+        width: 112px;
+        justify-content: space-between;
+        list-style-type: none;
+        li button{
+            font-size: 0; 
+            width: 4px;
+            height: 4px;
+            border: none;
+            border-radius: 100%;
+            background: #9A9EA3;
+        }
+    }
+    li.slick-active button{
+        width: 12px;
+        height: 12px;
+        background: none;
+        border: 2px solid $main-color;
+        border-radius: 100%;
+    }
+}
