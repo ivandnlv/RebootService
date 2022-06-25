@@ -1,8 +1,6 @@
 function Timer() {
   let deadline = Date.parse(new Date()) + 10000000;
 
-  console.log(deadline);
-
   function getTimeRemaining(endtime) {
     const t = endtime - Date.parse(new Date()),
       hours = Math.floor((t / (1000 * 60 * 60)) % 24),
