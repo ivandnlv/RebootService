@@ -1,6 +1,6 @@
-# Дипломная работа
+# Сайт для сервисного центра
 
-[Дипломная работа на тему: "Создание сайта при помощи html и css"](https://ivandnlv.github.io/RebootService/)
+[Сайт для сервисного центра Reboot](https://ivandnlv.github.io/RebootService/)
 
 Стэк: 
 + html; 
