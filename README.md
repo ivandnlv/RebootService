@@ -1,7 +1,5 @@
 # Сайт для сервисного центра
 
-[Сайт для сервисного центра Reboot](https://ivandnlv.github.io/RebootService/)
-
 Стэк: 
 + html; 
 + scss; 
